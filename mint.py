@@ -16,7 +16,7 @@ w3 = Web3(HTTPProvider)
 
 w3.middleware_onion.inject(geth_poa_middleware, layer=0)  # Inject POA middleware
 
-Perpetual_Motion_Machine_ABI_FILE = open(file='abis/Perpetual_Motion_Machine.json')
+Perpetual_Motion_Machine_ABI_FILE = open(file='Perpetual_Motion_Machine.json')
 Perpetual_Motion_Machine_ABI = json.loads(Perpetual_Motion_Machine_ABI_FILE.read())['abi']
 Perpetual_Motion_Machine_CA = w3.to_checksum_address('0x6A5da7CD28AA08C1aC601343d85a11648Eb8bA96')
 Perpetual_Motion_Machine_contract = w3.eth.contract(address = Perpetual_Motion_Machine_CA, abi = Perpetual_Motion_Machine_ABI)
