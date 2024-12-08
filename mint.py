@@ -1,17 +1,15 @@
 
 
 import secrets
-import string
 import time
 import json
 from eth_utils import keccak, to_bytes, to_hex
 
-from web3 import Web3, HTTPProvider, Account, WebsocketProvider, IPCProvider
+from web3 import Web3, HTTPProvider, Account
 from web3.middleware import geth_poa_middleware
 
 
 HTTPProvider = HTTPProvider('https://bsc-dataseed1.bnbchain.org')
-# WebsocketProvider = WebsocketProvider('wss://rpc-bsc.48.club/ws')
 w3 = Web3(HTTPProvider)
 
 w3.middleware_onion.inject(geth_poa_middleware, layer=0)  # Inject POA middleware
