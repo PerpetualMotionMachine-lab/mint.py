@@ -1,10 +1,22 @@
 # mint.py
 Perpetual Motion Machine mint script
-
+# Install miniconda
+```
+https://docs.anaconda.com/miniconda/install/
+```
+# create conda python=3.8
+```
+conda create -n mint-pmm python=3.8
+```
+# activate python3.8
+```
+conda activate mint-pmm
+```
 # How To Mint
 Just install 
+
 ```
-pip install secrets web3 eth_utils
+pip install -r requirements.txt
 ```
 
 and run
